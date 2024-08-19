@@ -20,6 +20,8 @@ function updateWeather(response) {
   let originWindSpeed = document.querySelector("#wind-speed");
   let originTime = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let originIcon = document.querySelector("#icon");
+  originIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
   originTime.innerHTML = formatDate(date);
   originWindSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   originHumidity.innerHTML = `${response.data.temperature.humidity}%`;

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(174, 222, 249);
+  background-color: rgb(197, 232, 252);
   font-family: "Roboto", sans-serif;
 }
 a {
@@ -8,17 +8,17 @@ a {
 .tiempo-app {
   background: white;
   border-radius: 10px;
-  box-shadow: 0 30px 50px rgba(62, 47, 99, 0.08);
+  box-shadow: 0 30px 50px rgba(34, 5, 223, 0.08);
   margin: 30px auto;
   max-width: 600px;
   padding: 30px;
 }
 header {
-  border-bottom: 1px solid rgb(174, 222, 249);
+  border-bottom: 1px solid rgb(231, 247, 255);
   padding: 0 0 30px 0;
 }
 .search-form-input {
-  background-color: #d1f1f7;
+  background-color: rgb(225, 242, 252);
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -59,21 +59,22 @@ main {
   display: flex;
 }
 .tiempo-app-icon {
-  font-size: 45px;
-  margin-top: 20px;
+  height: 80px;
+  width: 80px;
 }
 .tiempo-app-temperature {
   font-size: 90px;
   font-weight: 600;
-  margin-left: 8px;
+  line-height: 90px;
+  margin: 5px;
 }
 .tiempo-app-unit {
   font-size: 28px;
   font-weight: 600;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 footer {
-  border-top: 1px solid rgb(174, 222, 249);
+  border-top: 1px solid rgb(231, 247, 255);
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   padding: 10px 0 0 0;
