@@ -16,21 +16,32 @@
   <body>
     <div class="tiempo-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city.." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>London</h1>
-          <p>
-            Sunday 22:20, scattered clouds
-            <br />
-            Humidity: 70%, Wind: 1km/h
-          </p>
+        <div class="tiempo-app-data">
+          <div>
+            <h1 class="tiempo-app-city">London</h1>
+            <p class="tiempo-app-details">
+              Sunday 22:20, scattered clouds
+              <br />
+              Humidity: <strong>70%</strong>, Wind: <strong>1km/h</strong>
+            </p>
+          </div>
+          <div class="tiempo-app-temperature-box">
+            <div class="tiempo-app-icon">🌤</div>
+            <div class="tiempo-app-temperature">15</div>
+            <div class="tiempo-app-unit">℃</div>
+          </div>
         </div>
-        <div>🌤 15℃</div>
       </main>
       <footer>
         <p>
