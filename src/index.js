@@ -13,8 +13,36 @@ function searchCity(city) {
   axios.get(apiUrl).then(updateWeather);
 }
 function updateWeather(response) {
-  let temperature = document.querySelector("#temperature");
+  let originTemperature = document.querySelector("#temperature");
   let originCity = document.querySelector("#city");
-  originCity.innerHTML = respnse.data.city;
-  temperature.innerHTML = Math.round(response.data.temperature.current);
+  let originHumidity = document.querySelector("#humidity");
+  let originDescription = document.querySelector("#description");
+  let originWindSpeed = document.querySelector("#wind-speed");
+  let originTime = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  originTime.innerHTML = formatDate(date);
+  originWindSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+  originHumidity.innerHTML = `${response.data.temperature.humidity}%`;
+  originDescription.innerHTML = response.data.condition.description;
+  originCity.innerHTML = response.data.city;
+  originTemperature.innerHTML = Math.round(response.data.temperature.current);
+}
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
 }
